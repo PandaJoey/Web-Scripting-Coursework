@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Profile</title>
+    <link rel="stylesheet" href="lib/styles.css">
+    <script src="lib/sn.js"></script>
+</head>
+<body>
+<div id="profileNavBand">
+<nav id="mainNav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Account</a>
+            <ul>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="creategroup.html">Create Group</a></li>
+                <li><a href="group.html">Groups</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</div>
+<div id="uploadPic">
+    <form id="picUpload" action="users.php" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Upload Profile Picture</legend>
+            <div id="uploadDiv">
+                <label for="fileselect">Files to upload:</label>
+                <input type="file" id="fileselect" name="fileselect[]" multiple="multiple"/>
+                <div id="filedrag">or drop files here</div>
+            </div>
+            <div id="profilePicSubmit">
+                <button type="submit">Upload Files</button>
+            </div>
+        </fieldset>
+        <text></text>
+    </form>
+</div>
+<div id="cpForm">
+    <form id="profileForm" method="post" enctype="multipart/form-data" >
+        <input type="text" placeholder="userName" name="userName" id="userName">
+        <input type="url" placeholder="youtube" name="youtube" id="youtube">
+        <input type="url" placeholder="twitch" name="twitch" id="twitch">
+        <input type="url" placeholder="instagram" name="instagram" id="instagram">
+        <input type="text" placeholder="VoiceCommsIP" name="voiceCommsIP" id="voiceCommsIP">
+        <textarea  placeholder="Profile Information..." name="profileInfo" id="profileInfo"></textarea>
+        <button id="cpFormButton" type="button" onclick="createProfileSubmit(); return false;">Submit</button>
+    </form>
+</div>
+
+
+
+</body>
+</html>

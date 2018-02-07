@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function loadXMLDoc(data) {
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+                if (xmlhttp.status == 200) {
+//                    document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+                    console.log(JSON.parse(xmlhttp.responseText));
+
+                }
+                else if (xmlhttp.status == 400) {
+                    alert('There was an error 400')
+                }
+                else {
+
+                    alert('something else other than 200 was returned')
+                }
+            }
+        };
+        //GET//
+//        xmlhttp.open("GET", "users.php?userId=2", true);
+//        xmlhttp.send();
+        //END GET//
+
+        //POST//
+//        var data = [{
+//            userName:"This is my username",
+//            youtube: "http://youtube.com/xxx",
+//            profileInfo: "this is my profile"
+//        }];
+//        data.Title;
+        xmlhttp.open('POST', 'users.php', true);
+        xmlhttp.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        xmlhttp.send(JSON.stringify(data));
+
+        //END POST//
+    }
+    function submitForm() {
+        var formdata = {};
+        formdata["userName"] = document.getElementById('userName').value;
+        formdata["youtube"] = document.getElementById('youtube').value;
+        formdata["profileInfo"] = document.getElementById('profileInfo').value;
+        console.log(formdata);
+        loadXMLDoc(formdata);
+
+        return false;
+
+
+    }
+</script>
+
+<form method="post">
+    <input type="text" placeholder="username" name="userName" id="userName">
+    <input type="url" placeholder="youtube" name="youtube" id="youtube">
+    <textarea placeholder="Profile Information..." name="profileInfo" id="profileInfo"></textarea>
+    <button type="button" onclick="submitForm(); return false;">Submit</button>
+</form>
+
+</body>
+</html>

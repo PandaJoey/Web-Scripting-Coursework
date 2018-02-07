@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/styles.css">
+    <script src="lib/sn.js"></script>
+    <title>Create a Group</title>
+</head>
+<body>
+<div id="profileNavBand">
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Account</a>
+                <ul>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="creategroup.html">Create Group</a></li>
+                    <li><a href="group.html">Groups</a></li>
+                </ul>
+            </li>
+            <!--Need to find somewhere to put this that doesn't look quite so garish. -->
+            <li id="formLi">
+                <div id="quickSearchBoxDiv">
+                    <form action="api/ajaxExample.php" method="post" name="formName">
+                        <input id="quickSearchBox" name="searchTerm" type="text">
+                        <input type="submit">
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div>
+    <form  id="groupForm" method="post">
+        <input type="text" placeholder="groupname" name="groupName" id="groupName">
+        <textarea  placeholder="Group Information..." name="groupInfo" id="groupInfo"></textarea>
+        <button id="cpFormButton" type="button" onclick="createGroupSubmit(); return false;">Submit</button>
+    </form>
+</div>
+</body>
+</html>

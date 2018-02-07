@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Social Nerdworking</title>
+
+    <link rel="stylesheet" href="lib/styles.css">
+    <!--<script src="lib/hover.js"></script>-->
+    <!--<link rel="profiles" href="lib/profiles.css">-->
+    <!--<link rel="friendslist" href="lib/friendslist.css">-->
+    <!--<link rel="groups" href="lib/groups.css">-->
+</head>
+<body>
+<div id="topDiv">
+    <h1 id="topDivHeader">Social Nerdworking</h1>
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Account</a>
+                <ul>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="creategroup.html">Create Group</a></li>
+                    <li><a href="group.html">Groups</a></li>
+                </ul>
+            </li>
+            <!--Need to find somewhere to put this that doesn't look quite so garish. -->
+            <li id="formLi">
+                <div id="quickSearchBoxDiv">
+                    <form action="api/ajaxExample.php" method="post" name="formName">
+                        <input id="quickSearchBox" name="searchTerm" type="text">
+                        <input type="submit">
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div id="container">
+    <script src="lib/sn.js"></script>
+    <!--Need to figure out how to make the sidebar scrollable.-->
+    <!--Also need the scrollbar to move to top when user scrolls down page.-->
+    <div id="sideBar">
+        <h1 class="sidebarHeader">Friends</h1>
+        <hr>
+        <div class="friendSidebar">
+            <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/005/087/3be/2324c2d.jpg">
+            <span class="nameSidebar">Luke Crickmore</span>
+        </div>
+        <hr>
+        <div class="friendSidebar">
+            <img src="https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/11899853_10153271592179086_3920497260488567717_n.jpg?oh=805ef7f7ae2a1e76bba2155e3558d326&oe=573C79AB">
+            <span class="nameSidebar">Jay Wade</span>
+        </div>
+        <hr>
+        <div class="friendSidebar">
+            <img src="https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/390333_10150408739526487_1700036002_n.jpg?oh=29839470f96913678efe6ea54414d416&oe=57448E54">
+            <span class="nameSidebar">Ali Holiman</span>
+        </div>
+        <hr>
+        <div class="groupsList">
+            <h1 class="sidebarHeader">Groups</h1>
+            <hr>
+            <div class="friendSidebar">
+                <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/07/07b94271c5bb62664299a07cec49bf59d199813c_full.jpg">
+                <span class="nameSidebar">Team Awesome Gaming</span>
+            </div>
+            <hr>
+            <div class="friendSidebar">
+                <img src="http://cdn.akamai.steamstatic.com/steam/apps/440/header.jpg?t=1450396235">
+                <span class="nameSidebar">Tf2 Tradeing</span>
+            </div>
+            <hr>
+            <div class="friendSidebar">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ8qnmgvaAUp_AGC1VYIss9m9UPFF98q_agRE0syvhbGS9JPJsf">
+                <span class="nameSidebar">Dota2</span>
+            </div>
+            <hr>
+        </div>
+
+
+    </div>
+    <div id="profiles">
+
+    </div>
+</div>
+<script>
+    createGamerProfile();
+</script>
+</body>
+</html>

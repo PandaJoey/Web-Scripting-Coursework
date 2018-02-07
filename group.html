@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Groups</title>
+    <link rel="stylesheet" href="lib/styles.css">
+    <script src="lib/sn.js"></script>
+</head>
+<body>
+<div id="profileNavBand">
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Account</a>
+                <ul>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="creategroup.html">Create Group</a></li>
+                    <li><a href="group.html">Groups</a></li>
+                </ul>
+            </li>
+            <!--Need to find somewhere to put this that doesn't look quite so garish. -->
+            <li id="formLi">
+                <div id="quickSearchBoxDiv">
+                    <form action="api/ajaxExample.php" method="post" name="formName">
+                        <input id="quickSearchBox" name="searchTerm" type="text">
+                        <input type="submit">
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div id="profilePic">
+    <form id="picUpload" action="users.php" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Upload Profile Picture</legend>
+
+            <div id="uploadDiv">
+                <label for="fileselect">Files to upload:</label>
+                <input type="file" id="fileselect" name="fileselect[]" multiple="multiple"/>
+                <div id="filedrag">or drop files here</div>
+            </div>
+            <div id="profilePicSubmit">
+                <button type="submit">Upload Files</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div id="profileName">
+    <p id="playerName">[T-A!]PandaJoey*</p>
+</div>
+<div id="playerInfo">
+    <p>profile infor will go here using php stored information as far as im aware</p>
+</div>
+<div id="playerGames">
+    <p>lists of players games will go here from the database</p>
+</div>
+<div id="screenshots">
+    <p>multiple drag and drop uploads here</p>
+</div>
+<div id="profileSocialMedia">
+    <p>twitch and stuff here</p>
+</div>
+<div id="container">
+    <script src="lib/sn.js"></script>
+    <!--Need to figure out how to make the sidebar scrollable.-->
+    <!--Also need the scrollbar to move to top when user scrolls down page.-->
+    <div id="sideBar">
+        <h1 class="sidebarHeader">Friends</h1>
+        <hr>
+        <div class="friendSidebar">
+            <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/005/087/3be/2324c2d.jpg">
+            <span class="nameSidebar">Luke Crickmore</span>
+        </div>
+        <hr>
+        <div class="friendSidebar">
+            <img src="https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/11899853_10153271592179086_3920497260488567717_n.jpg?oh=805ef7f7ae2a1e76bba2155e3558d326&oe=573C79AB">
+            <span class="nameSidebar">Jay Wade</span>
+        </div>
+        <hr>
+        <div class="friendSidebar">
+            <img src="https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/390333_10150408739526487_1700036002_n.jpg?oh=29839470f96913678efe6ea54414d416&oe=57448E54">
+            <span class="nameSidebar">Ali Holiman</span>
+        </div>
+        <hr>
+        <div class="groupsList">
+            <h1 class="sidebarHeader">Groups</h1>
+            <hr>
+            <div class="friendSidebar">
+                <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/07/07b94271c5bb62664299a07cec49bf59d199813c_full.jpg">
+                <span class="nameSidebar">Team Awesome Gaming</span>
+            </div>
+            <hr>
+            <div class="friendSidebar">
+                <img src="http://cdn.akamai.steamstatic.com/steam/apps/440/header.jpg?t=1450396235">
+                <span class="nameSidebar">Tf2 Tradeing</span>
+            </div>
+            <hr>
+            <div class="friendSidebar">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ8qnmgvaAUp_AGC1VYIss9m9UPFF98q_agRE0syvhbGS9JPJsf">
+                <span class="nameSidebar">Dota2</span>
+            </div>
+            <hr>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>

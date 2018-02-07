@@ -1,0 +1,493 @@
+body * {
+    /*margin: 0;*/
+    /*padding: 0;*/
+}
+
+body {
+    margin: 0;
+    font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+nav ul {
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 15px 4px 17px 0;
+    list-style: none;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+nav ul li {
+    font: bold 12px/18px sans-serif;
+    display: inline-block;
+    margin-right: -4px;
+    position: relative;
+    padding: 15px 20px;
+    background: #87BCF8;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3e3e3e;
+}
+
+nav ul li:hover {
+    background: #ffffff;
+    color: #e3e3e3;
+}
+
+nav ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 150px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transiton: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -transition: opacity 0.2s;
+}
+
+nav ul li ul li {
+    background: #e3e3e3;
+    display: block;
+    color: #3e3e3e;
+    /*text-shadow: 0 -1px 0 #000;*/
+}
+
+nav ul li ul li:hover {
+    background: #666;
+}
+
+ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+#searchBox {
+
+    height: 50px;
+    width: 100%;
+    box-shadow: 10px 10px 10px #888888;
+
+}
+
+.userProfile {
+    height: 100%;
+    width: 80%;
+    border: 1px solid #000000;
+    margin: 5px;
+    color: #000000;
+    float: left;
+
+}
+
+#mainNav {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#profileNavBand {
+    height: 50px;
+    width: 100%;
+    background-color: #87BCF8;
+}
+
+#profilePic {
+    height: 100px;
+    width: 20%;
+    float: left;
+    padding-top: 50px;
+}
+
+#profileName {
+
+}
+
+#picUpload {
+    height: 50px;
+    width: 20%;
+    float: left;
+}
+
+#playerName {
+    font-size: 4vw;
+}
+
+#playerGames {
+
+}
+
+#screenshots {
+
+}
+
+#frontPageHeader {
+
+    height: 200px;
+    width: auto;
+    background-color: #87BCF8;
+    text-align: center;
+    padding-top: 25px;
+    margin: auto;
+
+}
+
+#frontPagePanel {
+
+}
+
+#frontPageSearchBox {
+    width: 1200px;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -600px;
+    position: fixed;
+}
+
+#frontPageSearchBox a {
+    text-align: center;
+    margin: auto;
+}
+
+#loginButton {
+
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #ffdae0;
+    float: right;
+    box-shadow: 10px 10px 10px #888888;
+    overflow: auto;
+}
+
+#topDiv {
+
+    width: 100%;
+    background-color: #87BCF8;
+    text-align: center;
+    padding-top: 25px;
+    margin: auto;
+
+}
+
+#container {
+    width: auto;
+    height: auto;
+
+}
+
+#profiles {
+    width: 80%;
+    float: left;
+
+}
+
+#quickSearchBox {
+
+    overflow: auto;
+    background-size: 10%;
+    background: url(magnify.png) no-repeat 5px;
+    padding-left: 30px;
+    color: #91949B;
+    border-radius: 2px;
+    border: 1px #91949B solid;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+#quickSearchBox:hover {
+    border: 1px #e3e3e3 solid;
+    background: url(magnifyWhite.png) no-repeat 5px;
+}
+
+#topDivHeader {
+
+    font-size: 50px;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+#formLi {
+    padding: 0 25px 0 15px;
+    margin: 0;
+    background: #87BCF8;
+    cursor: default;
+}
+
+#name {
+
+    font-size: 100px;
+    font-weight: bold;
+
+}
+
+#groupListHeader {
+    text-align: center;
+}
+
+#groupList {
+
+    height: 250px;
+    width: 300px;
+    background-color: dimgray;
+    right: 0%;
+    margin-top: 25%;
+    clear: right;
+    position: fixed;
+    border: 1px solid #ffffff;
+}
+
+#sideBar {
+    background-color: #e3e3e3;
+    width: 325px;
+    right: 0;
+    position: fixed;
+    color: #3e3e3e;
+    -webkit-box-shadow: -1px 1px 5px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: -1px 1px 5px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: -1px 1px 5px 0 rgba(0, 0, 0, 0.6);
+
+}
+
+#profileForm {
+    display: block;
+    font-size: 11px;
+    padding: 20px 20px 20px 20px;
+    border: solid 1px #aacfe4;
+    margin: 10px 10px 10px 10px;
+}
+
+#uploadPic {
+    height: 30%;
+    width: 100%;
+
+}
+
+#picUpload {
+    height: 150px;
+    width: 200px;
+    margin: 20px 20px 0px 129px;
+}
+
+#cpForm {
+    height: 70%;
+    width: 100%;
+
+}
+
+#profileForm input[type=file] {
+    height: 50px;
+    width: 80%;
+    border: solid 1px #aacfe4;
+    margin: 20px 20px 20px 100px;
+}
+
+#profileForm input[type=text] {
+    height: 30px;
+    width: 80%;
+    margin: 20px 20px 20px 100px;
+}
+
+#profileForm input[type=url] {
+    height: 30px;
+    width: 80%;
+    margin: 20px 20px 20px 100px;
+}
+
+#profileForm textarea {
+    height: 100px;
+    width: 80%;
+    margin: 20px 20px 20px 100px;
+}
+
+#cpFormButton {
+    height: 30px;
+    width: 60px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+
+#groupForm {
+    display: block;
+    font-size: 11px;
+    padding: 20px 20px 20px 20px;
+    border: solid 1px #aacfe4;
+    margin: 10px 10px 10px 10px;
+}
+
+#groupForm input[type=text] {
+    height: 30px;
+    width: 80%;
+    margin: 30px 30px 30px 100px;
+}
+
+#groupForm textarea {
+    height: 100px;
+    width: 80%;
+    margin: 30px 30px 30px 100px;
+}
+
+#cgButton {
+    height: 30px;
+    width: 60px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+
+}
+
+.expanded {
+
+}
+
+.profile {
+    height: 250px;
+    width: 270px;
+    border: 1px solid #000000;
+    margin: 5px;
+    color: #000000;
+    float: left;
+}
+
+.friend {
+
+    height: 15px;
+    width: 250px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    position: relative;
+    left: 10%;
+
+}
+
+.friendRow {
+
+    height: 15px;
+    width: 250px;
+    border: 1px solid #ffffff;
+    position: center;
+    padding: 5px 5px 5px 5px;
+
+}
+
+.friendColumn {
+
+    height: 35px;
+    width: 300px;
+    border: 1px solid #ffffff;
+    position: center;
+    padding: 5px 5px 5px 5px;
+}
+
+.sidebarHeader {
+    text-align: center;
+    padding: 25px;
+}
+
+.group {
+
+    height: 15px;
+    width: 250px;
+    border: 1px solid #ffffff;
+    vertical-align: bottom;;
+    position: relative;
+    left: 10%;
+}
+
+.groupRow {
+
+    height: 35px;
+    width: 300px;
+    border: 1px solid #ffffff;
+    position: center;
+    padding: 5px 5px 5px 5px;
+
+}
+
+.groupColumn {
+    height: 15px;
+    width: 250px;
+    border: 1px solid #ffffff;
+    position: center;
+    padding: 5px 5px 5px 5px;
+}
+
+.friendSidebar {
+    width: 100%;
+    padding: 15px;
+
+}
+
+.friendSidebar img {
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+.nameSidebar {
+    font-weight: bold;
+
+}
+
+.profileBlock {
+    height:100%;
+    width:80%;
+    border: 1px solid #000000;
+}
+
+
+#userProfilePic {
+    height: 100px;
+
+}
+
+#profileUserName {
+    height: 100px;
+}
+
+
+#profileUserInfo {
+    height: 100px;
+}
+
+
+#profileGames {
+    height: 100px;
+}
+
+#profileScreenShots{
+    height: 100px;
+}
+
+.profileSocialMedia{
+    height: 100px;
+    width: 100px;
+}
